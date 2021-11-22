@@ -28,47 +28,6 @@ button:hover {
   color: white;
 }
 
-.cursor {
-  z-index: -3;
-  opacity: 0.35;
-  transition: all 200ms ease-out;
-  position: fixed;
-  pointer-events: none;
-  left: 0;
-  top: 0;
-  transform: translate(calc(-50% + 15px), -50%);
-}
-
-.cursor2 {
-  opacity: .5;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: width .3s, height .3s, opacity .3s;
-}
-
-.cursor3 {
-  z-index: -3;
-  opacity: 0.2;
-  transition: all 400ms ease-out;
-  position: fixed;
-  pointer-events: none;
-  left: 0;
-  top: 0;
-  transform: translate(calc(-50% + 15px), -50%);
-}
-
-.hover {
-  background-color: red;
-  opacity: 0.5;
-}
-
-.cursorinnerhover {
-  width: 50px;
-  height: 50px;
-  opacity: .5;
-}
-
 .arrow-right {
   width: 0;
   height: 0;
@@ -77,10 +36,32 @@ button:hover {
   border-left: 20px solid green;
 }
 
-.arrow-left {
-  width: 0;
-  height: 0;
-  border-top: 25px solid transparent;
-  border-bottom: 25px solid transparent;
-  border-right: 40px solid cadetblue;
+.cursor {
+  opacity: .5;
+  position: fixed;
+  pointer-events: none;
+}
+
+.cursor2 {
+  z-index: -3;
+  opacity: 0.35;
+  transition: all .2s ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+}
+
+.cursor3 {
+  z-index: -3;
+  opacity: 0.2;
+  transition: all .4s ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+}
+
+.cursorinnerhover {
+  opacity: 1;
 }

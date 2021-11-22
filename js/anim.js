@@ -32,41 +32,32 @@ decPoints.forEach((btnf2) => {
 });
 
 const cursor = document.querySelector('.cursor');
-const cursorinner = document.querySelector('.cursor2');
-const cursorinner2 = document.querySelector('.cursor3');
+const cursor2 = document.querySelector('.cursor2');
+const cursor3 = document.querySelector('.cursor3');
 
 document.addEventListener('mousemove', (e) => {
   const x = e.clientX;
   const y = e.clientY;
-  cursor.style.transform = `translate3d(calc(${x}px - 50%), calc(${y}px - 50%), 0)`;
-});
-
-document.addEventListener('mousemove', (e) => {
-  const x = e.clientX;
-  const y = e.clientY;
-  cursorinner2.style.transform = `translate3d(calc(${x}px - 50%), calc(${y}px - 50%), 0)`;
-});
-
-document.addEventListener('mousemove', (e) => {
-  const x = e.clientX;
-  const y = e.clientY;
-  cursorinner.style.left = `${x}px`;
-  cursorinner.style.top = `${y}px`;
+  cursor.style.left = `${x}px`;
+  cursor.style.top = `${y}px`;
 });
 
 document.addEventListener('mousedown', () => {
-  cursorinner.classList.add('cursorinnerhover');
+  cursor.classList.add('cursorinnerhover');
 });
 
 document.addEventListener('mouseup', () => {
-  cursorinner.classList.remove('cursorinnerhover');
+  cursor.classList.remove('cursorinnerhover');
 });
 
-a.forEach(item => {
-  item.addEventListener('mouseover', () => {
-    cursor.classList.add('hover');
-  });
-  item.addEventListener('mouseleave', () => {
-    cursor.classList.remove('hover');
-  });
+document.addEventListener('mousemove', (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+  cursor2.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+});
+
+document.addEventListener('mousemove', (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+  cursor3.style.transform = `translate3d(${x}px, ${y}px, 0)`;
 });
